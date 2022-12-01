@@ -1,3 +1,5 @@
+$primary-color: red;
+
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -35,6 +37,7 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: $primary-color;
 }
 
 button {
