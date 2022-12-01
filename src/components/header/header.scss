@@ -1,0 +1,24 @@
+$primary-color: #FF6060;
+
+
+header {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img {
+        max-height: 60px;
+    }
+    nav ul{
+        display: flex;
+        li{
+            list-style: none;
+            margin-left: 50px;
+            a {
+                text-decoration: none;
+                color: $primary-color;
+                font-size: 24px;
+            }
+        }
+    }
+}
