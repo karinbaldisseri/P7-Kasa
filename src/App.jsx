@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-import "./App.scss";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Error from "./pages/error";
@@ -9,7 +8,7 @@ import Footer from "./components/footer";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -18,7 +17,7 @@ function App() {
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
-    </div>
+    </>
   );
 }
 
