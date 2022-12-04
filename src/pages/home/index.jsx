@@ -5,14 +5,9 @@ import Cards from "../../components/cards";
 export default function Home() {
   return (
     <>
-      {/* <Banner
-        title="Chez vous, partout et ailleurs"
-        img={HomeBannerImg}
-        alt="paysage"
-      /> */}
       <Banner>
         <>
-          <img src={HomeBannerImg} alt="paysage" />
+          <img src={HomeBannerImg} alt="paysage côtier" />
           <h2>Chez vous, partout et ailleurs</h2>
         </>
       </Banner>
