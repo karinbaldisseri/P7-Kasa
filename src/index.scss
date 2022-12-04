@@ -8,6 +8,7 @@ $primary-color: #FF6060;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     color : $primary-color;
+    transition: 250ms ease-in-out;
     img{
         object-fit: cover;;
     }
@@ -17,6 +18,6 @@ $primary-color: #FF6060;
 }
 
 body {
-    margin: 40px 100px;
+    margin: 35px 90px;
 }
 
