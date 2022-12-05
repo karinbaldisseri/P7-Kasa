@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 import "./collapse.scss";
-// import OpenedArrow from "../../assets/opened_arrow.png";
 
 function Collapse({ header, content }) {
   const [expand, setExpand] = useState(false);

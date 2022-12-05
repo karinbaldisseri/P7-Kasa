@@ -4,7 +4,7 @@ import Cards from "../../components/cards";
 
 export default function Home() {
   return (
-    <>
+    <main>
       <Banner>
         <>
           <img src={HomeBannerImg} alt="paysage côtier" />
@@ -12,6 +12,6 @@ export default function Home() {
         </>
       </Banner>
       <Cards />
-    </>
+    </main>
   );
 }
