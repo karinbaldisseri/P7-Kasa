@@ -1,0 +1,31 @@
+$background: #F6F6F6;
+$primary-color: #FF6060;
+
+.collapseElement {
+    border-radius: 5px;
+    background-color: $background;
+    margin: 0 95px 30px 95px;
+    button {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $primary-color;
+        width: 100%;
+        padding: 10px 25px 10px 15px;
+        border:none;
+        border-radius: 5px;
+        h2, span {
+            color: white;
+            font-size: 22px;
+            font-weight: 400;
+        }
+        span {
+            height: 22px;
+        }
+    }
+    p {
+        font-size: 22px;
+        font-weight: 400;
+        padding: 28px 20px 12px 15px;
+    }
+}

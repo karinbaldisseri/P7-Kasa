@@ -1,11 +1,23 @@
 import { Link } from "react-router-dom";
 import "./cards.scss";
-import AccommodationData from "../../data/accomodations.json";
+import { useEffect, useState } from "react";
+import { getAllAccommodations } from "../../api/api";
 
 export default function Cards() {
+  const [accommodations, setAccommodations] = useState([]);
+
+  const loadAccommodations = async () => {
+    const AccommodationsData = await getAllAccommodations();
+    setAccommodations(AccommodationsData);
+  };
+
+  useEffect(() => {
+    loadAccommodations();
+  }, []);
+
   return (
     <section className="cardsContainer">
-      {AccommodationData.map((accommodation) => {
+      {accommodations.map((accommodation) => {
         return (
           <Link
             to={`/accommodation/${accommodation.id}`}
