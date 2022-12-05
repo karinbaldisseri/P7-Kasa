@@ -4,7 +4,7 @@ import Collapse from "../../components/collapse";
 
 export default function About() {
   return (
-    <>
+    <main>
       <Banner>
         <img src={AboutBannerImg} alt="paysage montagneux" />
       </Banner>
@@ -16,6 +16,6 @@ export default function About() {
           gravida sapien eu imperdiet posuere. Nullam sed massa at sapien
           bibendum accumsan."
       />
-    </>
+    </main>
   );
 }

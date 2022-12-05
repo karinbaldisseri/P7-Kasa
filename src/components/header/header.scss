@@ -9,10 +9,9 @@ header {
     nav ul {
         display: flex;
         li {
-            list-style: none;
             margin-left: 50px;
             &:hover {
-              transform: scale(1.2);
+              transform: scale(1.1);
             }
             a {
                 font-size: 22px;
