@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
-import "./cards.scss";
 import { useEffect, useState } from "react";
+import "./cards.scss";
 import { getAllAccommodations } from "../../api/api";
 
 export default function Cards() {
   const [accommodations, setAccommodations] = useState([]);
 
   const loadAccommodations = async () => {
-    const AccommodationsData = await getAllAccommodations();
-    setAccommodations(AccommodationsData);
+    const accommodationsData = await getAllAccommodations();
+    setAccommodations(accommodationsData);
   };
 
   useEffect(() => {
