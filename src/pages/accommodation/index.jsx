@@ -1,23 +1,36 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getAccommodationById } from "../../api/api";
+import Slideshow from "../../components/slideshow";
+import Error from "../error";
 
-export default function Accommodation() {
-  const [accommodation, setAccommodation] = useState([]);
+function Accommodation() {
+  const [acc, setAcc] = useState([]);
   const { id } = useParams();
 
-  const loadAccommodation = async () => {
-    const accommodationData = await getAccommodationById(id);
-    setAccommodation(accommodationData);
-  };
-
   useEffect(() => {
-    loadAccommodation();
-  }, []);
+    const loadAcc = async () => {
+      const accData = await getAccommodationById(id);
+      setAcc(accData);
+    };
+    loadAcc().catch(console.error);
+  }, [id]);
+
+  console.log(acc);
 
   return (
     <main>
-      <h1>{accommodation.title}</h1>
+      {acc ? (
+        <>
+          {/* <Slideshow images={acc.pictures} /> */}
+          <Slideshow />
+          <h1>{acc.title}</h1>
+        </>
+      ) : (
+        <Error />
+      )}
     </main>
   );
 }
+
+export default Accommodation;

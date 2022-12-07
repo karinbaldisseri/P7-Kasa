@@ -1,0 +1,32 @@
+.slideshowContainer {
+    position: relative;
+    height: 390px;
+    margin: 20px auto 30px auto;
+    img {
+        height: 100%;
+        width: 100%;
+        border-radius: 25px;
+    }
+    .chevronLeft {
+        position: absolute;
+        height: 110px;
+        width: 50px;
+        top: 140px;
+        left: 15px;
+        cursor: pointer;
+    }
+    .chevronRight {
+        position: absolute;
+        height: 110px;
+        width: 50px;
+        top: 140px;
+        right: 15px;
+        cursor: pointer;
+    }
+    p {
+        color: white;
+        position: absolute;
+        bottom: 20px;
+        left: 49%;
+    }
+}
