@@ -1,4 +1,4 @@
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "./slideshow.scss";
@@ -9,10 +9,11 @@ const images = [
   "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-3.jpg",
   "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-4.jpg",
   "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-5.jpg",
-];
+]; 
 
 // function Slideshow({ images }) {
-function Slideshow() {
+function Slideshow({ title }) {
+  console.log(title);
   console.log(images);
   const [currentPic, setCurrentPic] = useState(0);
 
@@ -34,22 +35,33 @@ function Slideshow() {
 
   return (
     <section className="slideshowContainer">
+      {/* {console.log(images)}
+      {console.log(images[2])} */}
       <img src={images[currentPic]} alt="This accommodation" />
-      <FaChevronLeft
-        fill="white"
-        className="chevronLeft"
-        onClick={previousImg}
-      />
-      <FaChevronRight fill="white" className="chevronRight" onClick={nextImg} />
-      <p>
-        {currentPic + 1}/{images.length}
-      </p>
+      {images.length > 1 && (
+        <>
+          <FaChevronLeft
+            fill="white"
+            className="chevronLeft"
+            onClick={previousImg}
+          />
+          <FaChevronRight
+            fill="white"
+            className="chevronRight"
+            onClick={nextImg}
+          />
+          <p>
+            {currentPic + 1}/{images.length}
+          </p>
+        </>
+      )}
     </section>
   );
 }
 
-/* Slideshow.propTypes = {
-  images: PropTypes.arrayOf(PropTypes.string).isRequired,
-}; */
+Slideshow.propTypes = {
+  title: PropTypes.string.isRequired,
+  // images: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 
 export default Slideshow;
