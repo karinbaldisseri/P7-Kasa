@@ -16,14 +16,15 @@ function Accommodation() {
     loadAcc().catch(console.error);
   }, [id]);
 
-  console.log(acc);
-
   return (
     <main>
+      {console.log(acc.pictures)}
       {acc ? (
         <>
-          {/* <Slideshow images={acc.pictures} /> */}
-          <Slideshow />
+          {/* <Slideshow images={acc.pictures} />
+          {console.log(acc.pictures)} */}
+          {/* <Slideshow accommData={acc}/> */}
+          <Slideshow title={acc.title} />
           <h1>{acc.title}</h1>
         </>
       ) : (
