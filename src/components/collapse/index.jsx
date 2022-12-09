@@ -8,7 +8,7 @@ function Collapse({ header, content }) {
   const toggleCollapse = () => setExpand((previous) => !previous);
 
   return (
-    <article className="collapseElement">
+    <article className={`collapseElement ${!expand && "notExpanded"}`}>
       <button type="button" onClick={toggleCollapse}>
         <h2>{header}</h2>
         <span>
@@ -19,14 +19,21 @@ function Collapse({ header, content }) {
           )}
         </span>
       </button>
-      {expand && <p> {content}</p>}
+      {expand && (
+        <div>
+          <p> {content}</p>
+        </div>
+      )}
     </article>
   );
 }
 
 Collapse.propTypes = {
   header: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
+  content: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.string),
+  ]).isRequired,
 };
 
 export default Collapse;

@@ -1,0 +1,56 @@
+.infoSection {
+    display: flex;
+    justify-content: space-between;
+    h1 {
+        font-size: 30px;
+        margin: 12px 0 7px 0;
+    }
+    p {
+        font-size: 15px;
+    }
+    .profileInfo {
+        display: flex;
+        align-items: center;
+        p {
+            width: min-content;
+            text-align: right;
+            margin-right: 15px;
+        }
+        img {
+            width: 64px;
+            height: 64px;
+            border-radius: 40px;
+        }
+    }
+}
+
+.collapseSection {
+    display:flex;
+    gap: 70px;
+    .notExpanded {
+        background-color: white;
+    }
+    .collapseElement {
+        flex: 1;
+        margin: 0;
+        h2 {
+            font-size: 16px;
+            font-weight: 500;
+        }
+        div {
+            padding: 28px 18px;
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                padding: 0;
+            }
+        }
+        button {
+            border-radius: 10px;
+            span {
+                font-size: 26px;
+            }
+        }
+    }
+}
+
