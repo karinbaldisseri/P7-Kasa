@@ -15,8 +15,6 @@ export default function Cards() {
     loadAccommodations().catch(console.error);
   }, []);
 
-  console.log(accommodations);
-
   return (
     <section className="cardsContainer">
       {accommodations.map((accommodation) => {

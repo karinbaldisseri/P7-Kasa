@@ -1,0 +1,16 @@
+$primary-color: #FF6060;
+
+.tagsContainer {
+    display: flex;
+    margin: 18px 0;
+    .tagName {
+        font-size: 12px;
+        color: white;
+        background-color: $primary-color;
+        min-width: 100px;
+        width:fit-content;
+        padding: 5px 30px;
+        margin-right: 10px;
+        border-radius: 10px;
+    }
+}
