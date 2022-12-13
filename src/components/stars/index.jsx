@@ -32,7 +32,7 @@ Stars.propTypes = {
 };
 
 Stars.defaultProps = {
-  rating: "3",
+  rating: "0",
 };
 
 export default Stars;

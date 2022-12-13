@@ -1,9 +1,8 @@
-$background: #F6F6F6;
-$primary-color: #FF6060;
+@use "../../stylesUtils/" as *;
 
 .collapseElement {
     border-radius: 5px;
-    background-color: $background;
+    background-color: $background-primary;
     margin: 0 95px 30px 95px;
     button {
         display:flex;
@@ -16,7 +15,7 @@ $primary-color: #FF6060;
         border-radius: 5px;
         cursor: pointer;
         h2, span {
-            color: white;
+            color: $secondary-color;
             font-size: 22px;
             font-weight: 400;
         }
@@ -24,7 +23,7 @@ $primary-color: #FF6060;
             height: 22px;
         }
     }
-    p {
+    .content {
         font-size: 20px;
         font-weight: 400;
         line-height: 1.5;

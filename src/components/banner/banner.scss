@@ -1,9 +1,11 @@
+@use "../../stylesUtils/" as *;
+
 .bannerContainer {
     height: 200px;
     position: relative;
     margin: 40px auto 35px auto;
     h2 {
-        color: white;
+        color: $secondary-color;
         font-size: 3.3vw;
         position: absolute;
         width: 100%;

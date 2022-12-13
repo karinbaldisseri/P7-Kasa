@@ -1,5 +1,7 @@
+@use "../../stylesUtils/" as *;
+
 footer {
-    background-color: black;
+    background-color: $background-footer;
     height: 209px;
     text-align: center;
     margin-top: 40px;
@@ -8,7 +10,7 @@ footer {
         height: 40px;
     }
     p {
-        color: white;
+        color: $secondary-color;
         font-size: 24px;
     }
 }

@@ -4,10 +4,9 @@ import "./tags.scss";
 function Tags({ tagItems }) {
   return (
     <div className="tagsContainer">
-      {tagItems.map((tag, index) => {
+      {tagItems.map((tag) => {
         return (
-          // eslint-disable-next-line react/no-array-index-key
-          <p className="tagName" key={index}>
+          <p className="tagName" key={tag}>
             {tag}
           </p>
         );
@@ -21,7 +20,7 @@ Tags.propTypes = {
 };
 
 Tags.defaultProps = {
-  tagItems: ["none", "none", "none"],
+  tagItems: [],
 };
 
 export default Tags;
