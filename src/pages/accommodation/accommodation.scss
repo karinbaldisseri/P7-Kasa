@@ -1,3 +1,10 @@
+.loader {
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    margin: 45vh 30vw;
+}
+
 .infoSection {
     display: flex;
     justify-content: space-between;
@@ -10,6 +17,7 @@
     }
     .profileInfo {
         display: flex;
+        justify-content:right;
         align-items: center;
         p {
             width: min-content;
@@ -30,6 +38,9 @@
     .notExpanded {
         background-color: white;
     }
+    .content {
+        font-size: 16px;
+    }
     .collapseElement {
         flex: 1;
         margin: 0;
@@ -39,10 +50,11 @@
         }
         div {
             padding: 28px 18px;
+        }
+        .equipments {
+            padding: 0;
             p {
-                font-weight: 400;
-                font-size: 16px;
-                padding: 0;
+            font-weight: 400;
             }
         }
         button {

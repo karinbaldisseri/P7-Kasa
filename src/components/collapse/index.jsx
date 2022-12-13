@@ -19,21 +19,22 @@ function Collapse({ header, content }) {
           )}
         </span>
       </button>
-      {expand && (
-        <div>
-          <p> {content}</p>
-        </div>
-      )}
+      {expand && <div className="content">{content}</div>}
     </article>
   );
 }
 
 Collapse.propTypes = {
-  header: PropTypes.string.isRequired,
+  header: PropTypes.string,
   content: PropTypes.oneOfType([
     PropTypes.string,
-    PropTypes.arrayOf(PropTypes.string),
-  ]).isRequired,
+    PropTypes.arrayOf(PropTypes.element),
+  ]),
+};
+
+Collapse.defaultProps = {
+  header: "Titre",
+  content: "Contenu",
 };
 
 export default Collapse;

@@ -6,7 +6,15 @@ function Banner({ children }) {
 }
 
 Banner.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.element,
+};
+
+Banner.defaultProps = {
+  children: (
+    <div>
+      <img alt="" />
+    </div>
+  ),
 };
 
 export default Banner;

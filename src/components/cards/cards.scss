@@ -1,12 +1,11 @@
-$background: #F6F6F6;
-$primary-color: #FF6060;
+@use "../../stylesUtils/" as *;
 
 .cardsContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 30px;
-    background-color: $background;
+    background-color: $background-primary;
     padding: 45px 30px;
     border-radius: 25px;
     a {
@@ -35,7 +34,7 @@ $primary-color: #FF6060;
             bottom: 6%;
             left: 6%;
             max-width: 70%;
-            color: white;
+            color: $secondary-color;
             font-size: 18px;
         }
         img {
