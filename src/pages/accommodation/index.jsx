@@ -42,7 +42,7 @@ function Accommodation() {
               <p>{acc.location}</p>
               <Tags tagItems={acc.tags} />
             </div>
-            <div>
+            <div className="profileContainer">
               <div className="profileInfo">
                 <p>{acc.host.name}</p>
                 <img src={acc.host.picture} alt="Profile" />

@@ -1,12 +1,15 @@
 @use "../../stylesUtils/" as *;
 
 .bannerContainer {
-    height: 200px;
+    height: 220px;
     position: relative;
     margin: 40px auto 35px auto;
+    @include mobiles {
+        margin: 20px auto;
+    }
     h2 {
         color: $secondary-color;
-        font-size: 3.3vw;
+        font-size: 34px;
         position: absolute;
         width: 100%;
         top: 50%;
@@ -19,5 +22,8 @@
         width: 100%;
         border-radius: 25px;
         filter: brightness(0.7);
+        @include mobiles {
+            border-radius: 10px;
+        }
     }
 }

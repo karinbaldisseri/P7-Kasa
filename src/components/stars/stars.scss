@@ -1,8 +1,16 @@
+@use "../../stylesUtils/" as *;
+
 .ratingStars {
     margin: 20px 0 15px 0;
     text-align: right;
+  /*   @include mobiles {
+        text-align: left;
+    } */
     .star {
             font-size: 26px;
             margin-left: 5px;
+            @include mobiles {
+                font-size: 16px;
+            }
         }
 }

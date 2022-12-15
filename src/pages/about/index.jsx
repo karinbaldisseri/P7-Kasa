@@ -1,5 +1,6 @@
 import Banner from "../../components/banner";
 import AboutBannerImg from "../../assets/about_banner_img.png";
+import AboutBannerMobile from "../../assets/about_banner_mobile.png";
 import Collapse from "../../components/collapse";
 
 export default function About() {
@@ -31,9 +32,16 @@ export default function About() {
   ];
 
   return (
-    <main>
+    <main className="aboutPage">
       <Banner>
-        <img src={AboutBannerImg} alt="paysage montagneux" />
+        <picture>
+          <source
+            media="(max-width: 768px)"
+            srcSet={AboutBannerMobile}
+            alt="paysage côtier"
+          />
+          <img src={AboutBannerImg} alt="paysage montagneux" />
+        </picture>
       </Banner>
       {aboutData.map((item) => {
         return (
