@@ -29,12 +29,12 @@ function Slideshow({ images }) {
         <>
           <FaChevronLeft
             fill="white"
-            className="chevronLeft"
+            className="chevron left"
             onClick={previousPic}
           />
           <FaChevronRight
             fill="white"
-            className="chevronRight"
+            className="chevron right"
             onClick={nextPic}
           />
           <p>
