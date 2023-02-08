@@ -1,16 +1,5 @@
 @use "../../stylesUtils/" as *;
 
-.loader {
-    font-size: 60px;
-    font-weight: 700;
-    text-align: center;
-    margin: 45vh 30vw;
-    @include mobiles {
-        font-size:40px;
-        margin: 30vh 20vw;
-    }
-}
-
 .infoSection {
     display: flex;
     justify-content: space-between;
@@ -120,5 +109,28 @@
             }
         }
     }
+}
+
+.loader {
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    margin: 45vh 30vw;
+
+    @include mobiles {
+        font-size: 40px;
+        margin: 30vh 20vw;
+    }
+}
+
+.errMsg {
+    background-color: $primary-color;
+    color: $secondary-color;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    margin: 26vh 5vw;
+    border-radius: 5px;
 }
 

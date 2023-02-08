@@ -11,8 +11,9 @@ export default function Header() {
           <li>
             <NavLink
               to="/"
+              // using the navlink isActive property which returns a boolean (true if link is active / false if link not active)
               className={({ isActive }) => {
-                return isActive ? "" : "notActiveLink";
+                return isActive ? undefined : "notActiveLink";
               }}
             >
               Accueil
@@ -22,7 +23,7 @@ export default function Header() {
             <NavLink
               to="/about"
               className={({ isActive }) => {
-                return isActive ? "" : "notActiveLink";
+                return isActive ? undefined : "notActiveLink";
               }}
             >
               A Propos

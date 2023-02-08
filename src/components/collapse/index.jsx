@@ -5,11 +5,15 @@ import "./collapse.scss";
 
 function Collapse({ header, content }) {
   const [expand, setExpand] = useState(false);
-  const toggleCollapse = () => setExpand((previous) => !previous);
+  // const toggleCollapse = () => setExpand((previous) => !previous);
 
   return (
-    <article className={`collapseElement ${!expand && "notExpanded"}`}>
-      <button type="button" onClick={toggleCollapse}>
+    <article
+      className={expand ? "collapseElement" : " collapseElement notExpanded"}
+    >
+      {/* <article className={`collapseElement ${!expand && "notExpanded"}`}> */}
+      {/* <button type="button" onClick={toggleCollapse}> */}
+      <button type="button" onClick={() => setExpand(!expand)}>
         <h2>{header}</h2>
         <span>
           {expand ? (

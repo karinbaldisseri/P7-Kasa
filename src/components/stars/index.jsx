@@ -1,12 +1,10 @@
-/* eslint-disable no-plusplus */
-/* eslint-disable react/no-array-index-key */
 import PropTypes from "prop-types";
 import { FaStar } from "react-icons/fa";
 import "./stars.scss";
 
 function Stars({ rating }) {
   const stars = [];
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 5; i += 1) {
     if (i < rating) {
       stars[i] = true;
     } else {
@@ -18,6 +16,7 @@ function Stars({ rating }) {
     <div className="ratingStars">
       {stars.map((starRate, i) => (
         <FaStar
+          // eslint-disable-next-line react/no-array-index-key
           key={i}
           className="star"
           fill={starRate ? "#FF6060" : "#E3E3E3"}
