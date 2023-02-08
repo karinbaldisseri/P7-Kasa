@@ -1,0 +1,52 @@
+@use "../../stylesUtils/" as *;
+
+.slideshowContainer {
+    position: relative;
+    height: 390px;
+    margin: 20px auto;
+    @include mobiles {
+        height: 220px;
+        margin: 20px auto 15px auto;
+    }
+    img {
+        height: 100%;
+        width: 100%;
+        border-radius: 25px;
+        @include mobiles {
+            border-radius: 10px;
+        }
+    }
+    .chevron {
+        position: absolute;
+        height: 110px;
+        width: 50px;
+        top: 140px;
+        cursor: pointer;
+        @include mobiles {
+            height: 30px;
+            width: 30px;
+            top: 95px;
+        }
+    }
+    .left {
+        left: 15px;
+        @include mobiles {
+            left: 0;
+        }
+    }
+    .right {
+        right: 15px;
+        @include mobiles {
+            right: 0;
+        }
+    }
+    p {
+        color: $secondary-color;
+        position: absolute;
+        bottom: 20px;
+        left: 49%;
+        @include mobiles {
+            visibility: hidden;
+        }
+    }
+}

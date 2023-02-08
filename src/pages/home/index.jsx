@@ -1,20 +1,26 @@
 import Banner from "../../components/banner";
 import HomeBannerImg from "../../assets/home_banner_img.png";
+import HomeBannerMobile from "../../assets/home_banner_mobile.png";
+import Cards from "../../components/cards";
+import "./home.scss";
 
 export default function Home() {
   return (
-    <div>
-      {/* <Banner
-        title="Chez vous, partout et ailleurs"
-        img={HomeBannerImg}
-        alt="paysage"
-      /> */}
+    <main className="homePage">
       <Banner>
-        <div>
-          <img src={HomeBannerImg} alt="paysage" />
+        <>
+          <picture>
+            <source
+              media="(max-width: 768px)"
+              srcSet={HomeBannerMobile}
+              alt="paysage côtier"
+            />
+            <img src={HomeBannerImg} alt="paysage côtier" />
+          </picture>
           <h2>Chez vous, partout et ailleurs</h2>
-        </div>
+        </>
       </Banner>
-    </div>
+      <Cards />
+    </main>
   );
 }

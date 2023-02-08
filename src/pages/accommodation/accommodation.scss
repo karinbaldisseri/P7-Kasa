@@ -1,0 +1,124 @@
+@use "../../stylesUtils/" as *;
+
+.loader {
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    margin: 45vh 30vw;
+    @include mobiles {
+        font-size:40px;
+        margin: 30vh 20vw;
+    }
+}
+
+.infoSection {
+    display: flex;
+    justify-content: space-between;
+    @include mobiles {
+        flex-direction: column;
+    }
+    h1 {
+        font-size: 30px;
+        margin: 12px 0 7px 0;
+        @include mobiles {
+            font-size: 22px;
+            margin: 0 0 10px 0;
+        }
+    }
+    p {
+        font-size: 15px;
+        @include mobiles {
+            font-size: 13px;
+        }
+    }
+    .profileContainer {
+        @include mobiles {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            margin-bottom: 12px;
+
+        }
+    }
+    .profileInfo {
+        display: flex;
+        justify-content:right;
+        align-items: center;
+        
+        p {
+            width: min-content;
+            text-align: right;
+            margin-right: 15px;
+            @include mobiles {
+                margin-right: 8px;
+                font-size: 13px;
+            }
+        }
+        img {
+            width: 64px;
+            height: 64px;
+            border-radius: 40px;
+            @include mobiles {
+                width: 36px;
+                height: 36px;
+            }
+        }
+    }
+}
+
+.collapseSection {
+    display:flex;
+    gap: 70px;
+    @include tablets {
+        gap: 30px;
+    }
+    @include mobiles {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .notExpanded {
+        background-color: white;
+    }
+    .content {
+        font-size: 16px;
+        @include mobiles {
+            font-size: 12px;
+        }
+    }
+    .collapseElement {
+        flex: 1;
+        margin: 0;
+        h2 {
+            font-size: 16px;
+            font-weight: 500;
+            @include mobiles {
+                font-size: 13px;
+            }
+        }
+        div {
+            padding: 28px 18px;
+            @include mobiles {
+                padding: 14px 10px 5px 10px;
+            }
+        }
+        .equipments {
+            padding: 0;
+            p {
+            font-weight: 400;
+            }
+        }
+        button {
+            border-radius: 10px;
+            @include mobiles {
+                border-radius: 5px;
+            }
+            span {
+                font-size: 26px;
+                @include mobiles {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+

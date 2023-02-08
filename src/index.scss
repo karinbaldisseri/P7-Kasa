@@ -1,25 +1,33 @@
-$primary-color: #FF6060;
+@use "stylesUtils" as *;
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     color: inherit;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $primary-font;
     font-weight: 500;
     color : $primary-color;
+    transition: 250ms ease-in-out;
     img{
-        object-fit: cover;;
+        object-fit: cover;
     }
     li {
         list-style: none;
     }
-    a {
-        text-decoration: none;
-    }
 }
 
 body {
-    margin: 40px 100px;
+    margin-top: 35px;
+    @include mobiles {
+        margin-top: 25px;
+    }
+}
+
+header, main {
+    margin: 0 7% 0 7%;
+    @include mobiles {
+        margin: 0 4.8% 0 4.8%
+    }
 }
 
