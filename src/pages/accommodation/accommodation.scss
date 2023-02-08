@@ -112,15 +112,10 @@
 }
 
 .loader {
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 700;
     text-align: center;
-    margin: 45vh 30vw;
-
-    @include mobiles {
-        font-size: 40px;
-        margin: 30vh 20vw;
-    }
+    margin: 10vh 25vw;
 }
 
 .errMsg {
@@ -130,7 +125,7 @@
     font-weight: bold;
     text-align: center;
     padding: 20px;
-    margin: 26vh 5vw;
+    margin: 10vh 5vw;
     border-radius: 5px;
 }
 

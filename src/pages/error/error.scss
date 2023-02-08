@@ -2,11 +2,11 @@
 
 .errorSection {
     text-align: center;
-    margin-bottom: 120px;
+    margin: 40px 0 50px 0;
     h1 {
         font-weight: 700;
         font-size: 225px;
-        padding : 60px 0 30px 0;
+        padding : 50px 0 30px 0;
         @include tablets {
             font-size: 175px;
         }

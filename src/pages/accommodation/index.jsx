@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef } from "react";
-import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { getAccommodationById } from "../../api/api";
 import Slideshow from "../../components/slideshow";
 import Stars from "../../components/stars";
@@ -11,8 +11,7 @@ function Accommodation() {
   const [acc, setAcc] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const { id } = useParams();
-  const [errMsg, setErrMsg] = useState("");
-  const errRef = useRef();
+  const navigate = useNavigate();
 
   const loadAcc = async (paramsId) => {
     setIsLoading(true);
@@ -20,10 +19,8 @@ function Accommodation() {
       const accData = await getAccommodationById(paramsId);
       setAcc(accData);
     } catch (error) {
-      setErrMsg(
-        `Erreur de chargement de l'hébergement, veuillez réessayer svp !`
-      );
-      throw new Error(error);
+      navigate("/error");
+      throw new Error(error); // ou pas nécessaire ???
     } finally {
       setIsLoading(false);
     }
@@ -31,20 +28,12 @@ function Accommodation() {
 
   useEffect(() => {
     loadAcc(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   return (
     <main>
-      {isLoading && <p className="loader">Loading...</p>}
-      {!isLoading && !acc && (
-        <p
-          ref={errRef}
-          className={errMsg && "errMsg"}
-          aria-live="assertive" // if focus on this ref element, it will be announced with the screen reader
-        >
-          {errMsg}
-        </p>
-      )}
+      {isLoading && <p className="loader">Chargement en cours...</p>}
       {!isLoading && acc && (
         <>
           <Slideshow images={acc.pictures} />

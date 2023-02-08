@@ -30,7 +30,7 @@ export default function Cards() {
 
   return (
     <section className="cardsContainer">
-      {isLoading && <p className="loader">Loading...</p>}
+      {isLoading && <p className="loader">Chargement en cours...</p>}
       {!isLoading && !accommodations && (
         <p
           ref={errRef}
