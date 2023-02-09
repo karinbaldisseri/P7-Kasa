@@ -3,7 +3,7 @@
 .collapseElement {
     border-radius: 5px;
     background-color: $background-primary;
-    margin: 0 95px 30px 95px;
+    margin: 0 107px 30px 107px;
     @include tablets {
         margin: 0 50px 25px 50px;
     }
@@ -25,21 +25,21 @@
         }
         h2, span {
             color: $secondary-color;
-            font-size: 22px;
+            font-size: 24px;
             font-weight: 400;
             @include mobiles {
                 font-size: 14px;
             }
         }
         span {
-            height: 22px;
+            height: 24px;
             @include mobiles {
                 height: 14px;
             }
         }
     }
     .content {
-        font-size: 20px;
+        font-size: 24px;
         font-weight: 400;
         line-height: 1.5;
         padding: 28px 40px 12px 15px;
