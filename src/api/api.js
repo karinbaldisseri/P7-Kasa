@@ -1,4 +1,4 @@
-import accommodations from "./mocks/accomodations.json";
+import accommodations from "./mocks/accommodations.json";
 
 const getAllAccommodations = async () => accommodations;
 
