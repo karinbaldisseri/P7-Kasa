@@ -20,7 +20,6 @@ function Accommodation() {
       setAcc(accData);
     } catch (error) {
       navigate("/error");
-      throw new Error(error); // ou pas nécessaire ???
     } finally {
       setIsLoading(false);
     }

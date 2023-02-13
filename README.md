@@ -26,5 +26,6 @@ Positinnez-vous dans le dossier frontend et exécutez la commande :
 pour installer les packages requis pour le fonctionnement du frontend et 
 
 ensuite exécutez la commande:
-`npm run dev`
-pour démarrer l'application en local avec vitejs (http://127.0.0.1:5173/)
+`npm run dev` ou `npm run start`
+pour démarrer l'application en local avec vitejs 
+ouvrir http://127.0.0.1:5173 dans votre navigateur pour visualiser l'application

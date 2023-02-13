@@ -18,7 +18,6 @@ export default function Cards() {
       setErrMsg(
         `Erreur de chargement des hébergements, veuillez réessayer svp !`
       );
-      throw new Error(error);
     } finally {
       setIsLoading(false);
     }
